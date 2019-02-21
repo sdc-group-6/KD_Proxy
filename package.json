@@ -18,6 +18,7 @@
   "homepage": "https://github.com/abibasss/kelly-proxy#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0"
   }
 }
