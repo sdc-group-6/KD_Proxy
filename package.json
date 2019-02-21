@@ -1,0 +1,23 @@
+{
+  "name": "kelly-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abibasss/kelly-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abibasss/kelly-proxy/issues"
+  },
+  "homepage": "https://github.com/abibasss/kelly-proxy#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat-css": "^3.1.0"
+  }
+}
