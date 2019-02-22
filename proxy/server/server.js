@@ -52,19 +52,19 @@ app.use('/shares/:id',
   })
 );
 
-app.use('/products/',
+app.use('/products/:model',
   proxy({
     target: "http://127.0.0.1:8002",
     changeOrigin: true
   })
-)
+);
 
-app.use('/images/',
+app.use('/images/:imageId',
   proxy({
     target: "http://127.0.0.1:8002",
-    chageOrigin: true
+    changeOrigin: true
   })
-)
+);
 
 app.get('/', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");

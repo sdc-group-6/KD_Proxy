@@ -4,7 +4,12 @@ var concat = require('gulp-concat');
 var concatCss = require('gulp-concat-css');
 
 gulp.task('css', function() {
-  return gulp.src(['./**/*.css', '!./node_modules/**'])
+  return gulp.src(['./proxy/public/bootstrap-4.2.1/css/bootstrap.css',
+  './proxy/public/style.css',
+  './product-details/public/style/style.css',
+  './product-view/public/style.css',
+  '!./node_modules/**'
+])
     .pipe(concatCss('styleCombined.css'))
     .pipe(gulp.dest('./proxy/public'));
 });

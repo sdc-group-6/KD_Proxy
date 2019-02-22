@@ -6246,6 +6246,7 @@ a.close.disabled {
   margin-right: 15%;
   margin-left: 15%;
   list-style: none;
+  margin-bottom: -100px;
 }
 
 .carousel-indicators li {
