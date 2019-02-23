@@ -66,6 +66,13 @@ app.use('/images/:imageId',
   })
 );
 
+app.use('/reviews',
+  proxy({
+    target: "http://127.0.0.1:8003",
+    changeOrigin: true
+  })
+);
+
 app.get('/', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

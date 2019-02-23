@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node product-details/server/index.js | node product-view/server/index.js | node proxy/server/server.js"
+    "start": "node product-details/server/index.js | node product-view/server/index.js | node rating-review/server/index.js | node proxy/server/server.js"
   },
   "repository": {
     "type": "git",

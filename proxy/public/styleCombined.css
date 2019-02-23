@@ -12520,3 +12520,247 @@ ol.view-list li:hover {
   background-color: white;
   cursor: pointer;
 }
+@font-face {
+  font-family: 'adineue PRO Cyr Light Web';
+  src: url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-LightWeb.eot");
+  src: url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-LightWeb.eot?#iefix") format('embedded-opentype'),
+        url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-LightWeb.woff") format('woff'),
+        url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-LightWeb.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adineue PRO Cyr Bold Web';
+  src: url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-BoldWeb.eot");
+  src: url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-BoldWeb.eot?#iefix") format('embedded-opentype'),
+        url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-BoldWeb.woff") format('woff'),
+        url("../../../../rating-review/public/fonts/adineuePRO/adineuePROCyr-BoldWeb.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adihaus';
+  src: url("../../../../rating-review/public/fonts/AdihausDIN.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+#reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:focus {
+  outline: none;
+}
+
+.review-header {
+  font-family: "adineue PRO Cyr Bold Web",Helvetica,Arial,sans-serif;
+  font-size: 36px;
+  line-height: 32px;
+  margin-bottom: 40px;
+  text-align: left;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.review-opinion {
+  font-family: "adineue PRO Cyr Bold Web",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  width: 900px;
+}
+
+.review-review {
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  padding-bottom: 25px;
+  width: 900px;
+}
+
+.review-recommend {
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 15px;
+}
+
+.review-nickname-verify {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.review-nickname {
+  font-family: "adineue PRO Cyr Bold Web",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.review-verify {
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  color: #767677;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.review-button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.review-button-container button {
+  width: 300px;
+}
+
+.review-button-top-padding {
+  padding-top: 50px;
+}
+
+.review-load-more {
+  border: 1px solid;
+  color: #000;
+  padding: 16px 60px;
+  cursor: pointer;
+  background: none;
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.review-write {
+  border: 1px solid;
+  color: white;
+  padding: 16px 60px;
+  cursor: pointer;
+  background: black;
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+.review-write:after {
+  /*  transform: translate(15px, 15px);
+  box-shadow: inset 0px 0px 0px 1px #000;
+  width: 250px;
+  height: 50px;
+  display: block;
+  position: absolute;*/
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 55%;
+  width: 240px;
+  height: 45px;
+  box-shadow: inset 0 0 0 1px #000000;
+  transform: translate(3px,3px);
+}
+
+.review-arrow {
+  content: "\2192";
+  padding-left: 20px;
+}
+
+.review-sort-on {
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  letter-spacing: 2px;
+  padding-bottom: 12px;
+}
+
+.review-clicked-on {
+  border: 1px solid;
+  color: #000;
+  box-shadow: 0px 2px;
+  padding: 16px 60px;
+  cursor: pointer;
+  background: none;
+  font-family: "adineue PRO Cyr Bold Web",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.review-unclicked {
+  color: #767677;
+  padding: 16px 65px;
+  cursor: pointer;
+  background: none;
+  font-family: "adineue PRO Cyr Bold Web",Helvetica,Arial,sans-serif;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.review-date {
+  color: #767677;
+  text-align: center;
+  line-height: 20px;
+  display: block;
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 681px;
+}
+
+.review-date-stars {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  padding-top: 45px;
+  width: 900px;
+}
+
+.review-checkmark {
+  content: "\2713";
+}
+
+.review-reply-helpful {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  width: 900px;
+}
+
+.review-reply {
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.review-helpful {
+  display: flex;
+  flex-direction: row;
+  font-family: "adihaus",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  padding-left: 610px;
+  padding-right: 5px;
+  padding-bottom: 45px;
+}
+
+.review-helpful-text {
+  width: 139px;
+}
+
+.review-boolean {
+  width: 55px;
+  background: none;
+  border: none;
+}
