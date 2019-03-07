@@ -22,51 +22,51 @@ app.use(function(req, res, next) {
 });
 
 
-app.use(express.static(path.join(__dirname, '/../public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
-app.use('/shoes',
-  proxy({
-    target: "http://127.0.0.1:8001",
-    changeOrigin: true
-  })
-);
+// app.use('/shoes',
+//   proxy({
+//     target: "http://127.0.0.1:8001",
+//     changeOrigin: true
+//   })
+// );
 
-app.use('/shoes/:shoeId',
-  proxy({
-    target: "http://127.0.0.1:8001",
-    changeOrigin: true
-  })
-);
+// app.use('/shoes/:shoeId',
+//   proxy({
+//     target: "http://127.0.0.1:8001",
+//     changeOrigin: true
+//   })
+// );
 
-app.use('/looks/:id',
-  proxy({
-    target: "http://127.0.0.1:8001",
-    changeOrigin: true
-  })
-);
+// app.use('/looks/:id',
+//   proxy({
+//     target: "http://127.0.0.1:8001",
+//     changeOrigin: true
+//   })
+// );
 
-app.use('/shares/:id',
-  proxy({
-    target: "http://127.0.0.1:8001",
-    changeOrigin: true
-  })
-);
+// app.use('/shares/:id',
+//   proxy({
+//     target: "http://127.0.0.1:8001",
+//     changeOrigin: true
+//   })
+// );
 
-app.use('/products/:model',
-  proxy({
-    target: "http://127.0.0.1:8002",
-    changeOrigin: true
-  })
-);
+// app.use('/products/:model',
+//   proxy({
+//     target: "http://127.0.0.1:8002",
+//     changeOrigin: true
+//   })
+// );
 
-app.use('/images/:imageId',
-  proxy({
-    target: "http://127.0.0.1:8002",
-    changeOrigin: true
-  })
-);
+// app.use('/images/:imageId',
+//   proxy({
+//     target: "http://127.0.0.1:8002",
+//     changeOrigin: true
+//   })
+// );
 
-app.use('/reviews',
+app.use('/reviews/:id',cors(),
   proxy({
     target: "http://127.0.0.1:8003",
     changeOrigin: true
