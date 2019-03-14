@@ -1,10 +1,11 @@
+require('newrelic');
 const express = require('express');
+const app = express();
 const path = require('path');
 const morgan = require('morgan');
+const proxy = require('http-proxy-middleware');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const proxy = require('http-proxy-middleware');
-const app = express();
 const port = process.env.PORT || 8000;
 
 app.use(morgan('dev'));
@@ -68,10 +69,17 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/reviews/:id',cors(),
   proxy({
-    target: "http://127.0.0.1:8003",
+    target: "http://ec2-54-67-95-154.us-west-1.compute.amazonaws.com:8003",
     changeOrigin: true
   })
 );
+
+// app.use('/postreview/:id',cors(),
+//   proxy({
+//     target: "http://127.0.0.1:8003",
+//     changeOrigin: true
+//   })
+// );
 
 app.get('/', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
